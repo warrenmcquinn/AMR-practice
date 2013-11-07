@@ -1,0 +1,28 @@
+On Wednesday, April 6th, I would like to fly from Long Beach to Columbus after 3 pm.
+
+(l / like-02
+      :ARG0 "I"
+      :ARG1 (f / fly-01 :source "Long Beach" :destination "Columbus"
+            :time (d / date-entity :month "April" :weekday "Wednesday" :day 6
+                  :time (a / after :time "15:00"))))
+
+After 12 pm on Wednesday, April 6th, I would like to fly from Long Beach to Columbus.
+
+(l2 / like-02
+      :ARG0 "I"
+      :ARG1 (f2 / fly-02 :source "Long Beach" :destination "Columbus"
+            :time (d2 / date-entity :month "April" :weekday "Wednesday" :day 6
+                  :time (a2 / after :time "12:00"))))
+
+
+Are there any flights from Long Beach to Columbus on Wednesday, April 6th?
+
+(e / exist-01 :mode interrogative
+      :ARG0 (f3 / flights :source "Long Beach" :destination "Columbus"
+            :time (d3 / date-entity :month "April" :day 6 :weekday "Wednesday")))
+
+Find a flight from Memphis to Tacoma, dinner.
+
+(f4 / find-01 :mode imperative
+      :ARG1 (f5 / flight :source "Memphis" :destination "Tacoma"
+            :time (d4 / date-entity :time "dinner")))
