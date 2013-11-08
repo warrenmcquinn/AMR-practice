@@ -51,8 +51,6 @@
             :time (d5 / date-entity :month 4 :day 1)
             :instrument (c12 / company :name (n14 / name :op1 "Delta" :op2 "Airlines"))))
 
-6. I need a flight from Toronto to Newark, one-way, leaving Wednesday evening or Thursday morning. 
-
 On Wednesday, April 6th, I would like to fly from Long Beach to Columbus after 3 pm.
 
 (l / like-02
