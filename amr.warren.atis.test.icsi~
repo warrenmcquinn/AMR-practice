@@ -51,7 +51,30 @@
             :time (d5 / date-entity :month 4 :day 1)
             :instrument (c12 / company :name (n14 / name :op1 "Delta" :op2 "Airlines"))))
 
-On Wednesday, April 6th, I would like to fly from Long Beach to Columbus after 3 pm.
+6. I need a flight from Toronto to Newark, one-way, leaving Wednesday evening or Thursday morning. 
+
+(n / need-01
+      :ARG1 (f / flight
+            :destination (c / city :name (n2 / name :op1 "Newark"))
+            :source (c2 / city :name (n3 / name :op1 "Toronto"))
+            :manner (o / one :name (n4 / name :op1 "way"))
+            :ARG0-of (l / leave-01
+                  :time (o2 / or
+                        :op1 (d / date-entity :weekday "Wednesday" :time "evening")
+                        :op2 (d2 / date-entity :weekday "Thursday"
+                              :time (m / morning))))))
+
+7. Monday morning, I would like to fly from Columbus to Indianapolis.
+
+(l5 / like-02
+      :ARG0 (i6 / i)
+      :ARG1 (f7 / fly-01
+            :ARG1 i6
+            :source (c15 / city :name (n19 / name :op1 "Columbus"))
+            :destination (c16 / city :name (n20 / name :op1 "Indianapolis"))
+            :time (d8 / date-entity :weekday "Monday" :time "morning")))
+
+8. On Wednesday, April 6th, I would like to fly from Long Beach to Columbus after 3 pm.
 
 (l / like-02
       :ARG0 "I"
@@ -59,7 +82,8 @@ On Wednesday, April 6th, I would like to fly from Long Beach to Columbus after 3
             :time (d / date-entity :month "April" :weekday "Wednesday" :day 6
                   :time (a / after :time "15:00"))))
 
-After 12 pm on Wednesday, April 6th, I would like to fly from Long Beach to Columbus.
+
+9. After 12 pm on Wednesday, April 6th, I would like to fly from Long Beach to Columbus.
 
 (l2 / like-02
       :ARG0 "I"
@@ -68,13 +92,13 @@ After 12 pm on Wednesday, April 6th, I would like to fly from Long Beach to Colu
                   :time (a2 / after :time "12:00"))))
 
 
-Are there any flights from Long Beach to Columbus on Wednesday, April 6th?
+10. Are there any flights from Long Beach to Columbus on Wednesday, April 6th?
 
 (e / exist-01 :mode interrogative
       :ARG0 (f3 / flights :source "Long Beach" :destination "Columbus"
             :time (d3 / date-entity :month "April" :day 6 :weekday "Wednesday")))
 
-Find a flight from Memphis to Tacoma, dinner.
+11. Find a flight from Memphis to Tacoma, dinner.
 
 (f4 / find-01 :mode imperative
       :ARG1 (f5 / flight :source "Memphis" :destination "Tacoma"
